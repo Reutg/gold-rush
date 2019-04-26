@@ -4,10 +4,21 @@ class Renderer{
     }
 
     renderBoard(matrix){
-        let source = $('#metrix-template').html()
+        let source = $('#matrix-template').html()
         let template = Handlebars.compile(source)
         let newHTML = template({matrix})
-        $('#metrix-container').empty().append(newHTML)
+        $('.board-container').empty().append(newHTML)
     }
 }
 
+Handlebars.registerHelper('inc', function(number) {
+    return number + 1;
+});
+
+// {matrix:[
+//     [1,2,3,4,5],
+//     [1,2,3,4,5],
+//     [1,2,3,4,5],
+//     [1,2,3,4,5],
+//     [1,2,3,4,5],
+// ]}

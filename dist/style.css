@@ -1,0 +1,54 @@
+body{
+    margin: 0;
+    height: 100vh;
+    padding: 8px;
+    box-sizing: border-box;
+}
+
+.board-container {
+    height: 90%;
+    display: grid;  
+}
+
+.board{
+    display: grid;
+}
+
+.results{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 5%;
+}
+
+.player1{
+    color: blue;
+    padding-top: 15px;
+
+}
+
+.player2{
+    color: red;
+    padding-top: 15px;
+    justify-self: flex-end;
+}
+
+.player1 , .player2> span{
+    margin-left: 5px;
+}
+
+.box{
+    height: 100%;
+    width: 100%;
+    background-color: blueviolet;
+    border: 1px solid black;
+}
+
+.game-options{
+    display: grid;
+    grid-template-columns: 1fr 1fr 4fr;
+    height: 5%;
+}
+
+.game-options > input, button {
+   margin: 3px;
+}

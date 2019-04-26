@@ -7,11 +7,10 @@ class Matrix{
 
     generateMatrix(rowsNum, colsNum) {
         let matrix = []
-        let num = 1
         for (let r = 0; r < rowsNum; r++) {
             matrix.push([])
             for (let c = 0; c < colsNum; c++) {
-                matrix[r].push(num++)
+                matrix[r].push([])
             }
         }
         return matrix
@@ -62,4 +61,3 @@ class Matrix{
 
 
 
-m.print()

@@ -8,8 +8,36 @@
     <link rel="stylesheet" type="text/css" media="screen" href="style.css">
 </head>
 <body>
+    <div class="board-container"></div>
+    <div class="results">
+        <span class="player1">Player 1:<span>50</span></span>
+        <span class="player2">Player 2:<span>70</span></span>
+    </div>
+
+    <div class="game-options">
+      <input type="text" class="rows">
+      <input type="text" class="cols">
+      <button class="start"></button>
+
+    </div>
     
     
+
+
+    <script id="matrix-template" type="text/x-handlebars-template">
+        {{#each matrix}}  
+          <!-- <div class = "board"> -->
+              {{#each this}}
+            <div class = "box" style='grid-row: {{inc @../index}}'>
+            {{this}}
+            </div>
+              {{/each}}
+  
+          <!-- </div> -->
+        {{/each}}
+      </script>
+    <script src="./jquery/dist/jquery.js"></script>
+    <script src="./handlebars/dist/handlebars.js"></script>
     <script src="Renderer.js"></script>
     <script src="Matrix.js"></script>
     <script src="GoldRush.js"></script>
