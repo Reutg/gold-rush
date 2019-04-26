@@ -10,30 +10,31 @@
 <body>
     <div class="board-container"></div>
     <div class="results">
-        <span class="player1">Player 1:<span>50</span></span>
-        <span class="player2">Player 2:<span>70</span></span>
+      <span class="player1">Player 1:<span>50</span></span>
+      <span class="player2">Player 2:<span>70</span></span>
     </div>
-
+    
     <div class="game-options">
       <input type="text" class="rows">
       <input type="text" class="cols">
-      <button class="start"></button>
+      <button class="start" onclick="loadBoard()">start</button>
 
     </div>
     
     
-
+    <script id="players-template" type="text/x-handlebars-template">
+    
+    </script>
 
     <script id="matrix-template" type="text/x-handlebars-template">
-        {{#each matrix}}  
-          <!-- <div class = "board"> -->
+        {{#each matrix}} 
               {{#each this}}
             <div class = "box" style='grid-row: {{inc @../index}}'>
-            {{this}}
+            {{box this}}
+             
+            
             </div>
               {{/each}}
-  
-          <!-- </div> -->
         {{/each}}
       </script>
     <script src="./jquery/dist/jquery.js"></script>

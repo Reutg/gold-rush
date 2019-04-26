@@ -8,9 +8,9 @@ class Matrix{
     generateMatrix(rowsNum, colsNum) {
         let matrix = []
         for (let r = 0; r < rowsNum; r++) {
-            matrix.push([])
+            matrix[r] = []
             for (let c = 0; c < colsNum; c++) {
-                matrix[r].push([])
+                matrix[r].push(".")
             }
         }
         return matrix
@@ -20,6 +20,15 @@ class Matrix{
         let value = this.matrix[row][col]
         return value
     }
+
+    
+        //    [
+        //     [1,2,3,4,5],
+        //     [1,2,3,4,5],
+        //     [1,2,3,4,5],
+        //     [1,2,3,4,5],
+        //     [1,2,3,4,5],
+        //    ]
 
     print() {
         for (let i = 0; i < this.matrix.length; i++) {
@@ -59,5 +68,4 @@ class Matrix{
     }
 }
 
-
-
+let m = new Matrix(5,5)
