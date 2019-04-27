@@ -10,8 +10,7 @@
 <body>
     <div class="board-container"></div>
     <div class="results">
-      <span class="player1">Player 1:<span>50</span></span>
-      <span class="player2">Player 2:<span>70</span></span>
+     
     </div>
     
     <div class="game-options">
@@ -21,9 +20,11 @@
 
     </div>
     
-    
-    <script id="players-template" type="text/x-handlebars-template">
-    
+
+    <script id="results-template" type="text/x-handlebars-template">
+      
+      <span class="player1">Player 1:<span>{{this.player1}}</span></span>
+      <span class="player2">Player 2:<span>{{this.player2}}</span></span>
     </script>
 
     <script id="matrix-template" type="text/x-handlebars-template">
@@ -31,8 +32,6 @@
               {{#each this}}
             <div class = "box" style='grid-row: {{inc @../index}}'>
             {{box this}}
-             
-            
             </div>
               {{/each}}
         {{/each}}
